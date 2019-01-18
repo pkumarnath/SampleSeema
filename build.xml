@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="RAPID">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="C:/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/org.testng_6.13.1.r201712040515.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/com.beust.jcommander_1.72.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.yaml.snakeyaml_1.17.0.jar"/>
+    </path>
+    <path id="RAPID.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/commons-lang-2.5.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/dynamicreports-core-3.1.0.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/java-json.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/java-mail-1.4.4.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/javax.servlet-3.0.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jersey-client-1.7.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jersey-core-1.17.1.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jersey-json-1.17.1.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jersey-multipart.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jersey-server-1.17.1.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jersey-servlet-1.17.1.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jxl-2.6.10.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/jxl-2.6.12.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/log4j-1.2.17.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/mysql-connector-java-5.1.34.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/selenium-firefox-driver-2.0a4.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/selenium-firefox-driver-2.0b3.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/selenium-server-standalone-2.44.0.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/selenium-server-standalone-2.46.0.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/sikuli-api-1.0.2-standalone.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/sikuli-script.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/slf4j.api-1.6.1.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/slf4j-simple-1.6.1.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/sonnet_framework.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/testng-6.8.5.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/xmlunit-1.4.jar"/>
+        <pathelement location="../../Hybris Repo/SonnetTest/jars/xmlunit-1.4-sources.jar"/>
+        <pathelement location="C:/Program Files/Java/jdk1.8.0_151/lib/ant-javafx.jar"/>
+        <pathelement location="C:/Program Files/Java/jdk1.8.0_151/lib/dt.jar"/>
+        <pathelement location="C:/Program Files/Java/jdk1.8.0_151/lib/javafx-mx.jar"/>
+        <pathelement location="C:/Program Files/Java/jdk1.8.0_151/lib/jconsole.jar"/>
+        <pathelement location="C:/Program Files/Java/jdk1.8.0_151/lib/packager.jar"/>
+        <pathelement location="C:/Program Files/Java/jdk1.8.0_151/lib/sa-jdi.jar"/>
+        <pathelement location="C:/Program Files/Java/jdk1.8.0_151/lib/tools.jar"/>
+        <path refid="TestNG.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="RAPID.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

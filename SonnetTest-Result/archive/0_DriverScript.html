@@ -1,0 +1,171 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:math="http://exslt.org/math" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>
+					SonnetTest Result:
+					scripts
+				.
+			DriverScript</title>
+<link rel="stylesheet" type="text/css" title="Style" href="./stylesheet.css">
+<script type="text/javascript" language="JavaScript">
+					var TestCases = new Array();
+					var cur;
+					
+				</script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style type=\"text/css\">");
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+				</script><script language="javascript">
+				function toggle(elementId,imageId,hideId) {
+			    var ele = document.getElementById(elementId);
+			    var img = document.getElementById(imageId);
+			    var hide = document.getElementById(hideId);
+			    if(ele.style.display == "block") {
+			            ele.style.display = "none";
+			             img.src="../test/img/expand.gif";
+			             hide.style.display="none";
+			    }
+			    else {
+			        ele.style.display = "block";
+			        img.src="../test/img/collapse.gif";
+			        hide.style.display="block";
+			    }
+			}
+		</script><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">
+		    
+		      google.load('visualization', '1.0', {'packages':['corechart']});
+		      google.setOnLoadCallback(drawChart);
+		
+		      function drawChart() {
+				 var data = new google.visualization.DataTable();
+				 data.addColumn('string', 'TestStatus');
+				 data.addColumn('number', 'Number_of_Tests');
+				 data.addRows([
+			        ['Errors', 0],
+			        ['Failures', 1],
+			        ['Successes', 0], 
+			      ]);
+ 
+			     
+		      var options = {		 
+		        width: 500,
+		        height: 200,
+		        colors: ['#FF3333', '#A00000', '#339933'],
+		        legend: { position: 'left', maxLines: 1 },
+		        is3D: true,
+		         'chartArea': {'width': '75%', 'height': '90%'},
+		      };
+		
+		        // Instantiate and draw our chart, passing in some options.
+		        var chart = new google.visualization.PieChart(document.getElementById('chart_div_acrossmethods'));
+		        chart.draw(data, options);
+		      }
+		    </script>
+<style>
+					html { overflow-y: hidden; }
+					html { overflow-x: hidden; }
+			  </style>
+</head>
+<body>
+<div id="logo">
+<h1>
+		Automation Test Result
+	</h1>
+<img src="../test/logo.png" alt="Mountain View" style="width:100px;height:50px;"></div>
+<table width="100%"></table>
+<hr size="1">
+<div width="100%">
+<div id="summarytable" style="width:52%">
+<h2>Summary</h2>
+<table class="summary-details" border="0" cellpadding="5" cellspacing="2" width="100%">
+<tr valign="top">
+<th width="17%">URL</th><td>https://landfill.bugzilla.org/bugzilla-4.4-branch/</td>
+</tr>
+<tr valign="top">
+<th width="17%">Browser Name</th><td>ie</td>
+</tr>
+<tr valign="top">
+<th width="17%">Executed On</th><td>04/13/2017 12:32:44 PM</td>
+</tr>
+</table>
+<h3>
+					Test Script:
+				  	scripts
+				.
+			DriverScript</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
+<tr valign="top">
+<th>Tests</th><th>Errors</th><th>Failures</th><th>Successes</th><th>Time(sec)</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a title="Display all tests" href="0_DriverScript.html">1</a></td><td>0</td><td><a title="Display only failures" href="0_DriverScript-fails.html">1</a></td><td>0</td><td>41.366</td>
+</tr>
+</table>
+</div>
+<div id="chart" style="width:48%">
+<div id="chart_div_acrossmethods"></div>
+</div>
+</div>
+<table width="100%"></table>
+<h2>Tests</h2>
+<div class="scrollingtable">
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
+<tr valign="top">
+<th width="40%">Name</th><th>Status</th><th width="50%">Error details</th><th nowrap>Time(sec)</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="LogABug"></a><a href="0_DriverScript_LogABug.html" target="popup" onclick="window.open('0_DriverScript_LogABug.html','popup','width=600,height=600,dialog=yes,menubar=no'); return false;">LogABug</a></td><td>Failure</td><td id="errordetails">
+<div>
+<div class="left" style="width:4%">
+<img id="LogABug_img" class="stacktrace" src="../test/img/expand.gif" onclick="javascript:toggle('LogABug','LogABug_img','LogABug_hide');"></div>
+<div class="right" style="width:96%">By.id: login_link_top  - element NOT found... For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html Build info: version: '2.45.0', revision: '5017cb8', time: '2015-02-27 00:00:10' System info: host: 'BG4WS0251', ip: '172.29.93.56', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91' Driver info: driver.version: unknown</div>
+</div>
+<div>
+<div class="hide" id="LogABug_hide" style="width:4%" name="hide">.</div>
+<div id="LogABug" class="stacktrace" style="width:96%">
+<br>
+<br>
+<code>
+<br>      org.openqa.selenium.NoSuchElementException: By.id: login_link_top  - element NOT found...<br>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br>Build info: version: '2.45.0', revision: '5017cb8', time: '2015-02-27 00:00:10'<br>System info: host: 'BG4WS0251', ip: '172.29.93.56', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'<br>Driver info: driver.version: unknown<br>	at test.webdriver.SonnetAction.click(SonnetAction.java:180)<br>	at pageClass.pageView.log_in(pageView.java:83)<br>	at scripts.DriverScript.LogABug(DriverScript.java:50)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>	at java.lang.reflect.Method.invoke(Unknown Source)<br>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br>	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>	at org.testng.TestRunner.privateRun(TestRunner.java:767)<br>	at org.testng.TestRunner.run(TestRunner.java:617)<br>	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>	at org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)<br>	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)<br>	at org.testng.TestNG.run(TestNG.java:1057)<br>	at org.testng.TestNG.privateMain(TestNG.java:1364)<br>	at org.testng.TestNG.main(TestNG.java:1333)<br>
+<br>    
+</code>
+</div>
+</div>
+</td><td>41.366</td>
+</tr>
+</table>
+</div>
+<div class="Properties">
+<a href="javascript:displayProperties('scripts.DriverScript');">
+						Properties &raquo;
+					</a>
+</div>
+<footer>
+<p>Report generated by SonnetTEST Framework</p>
+</footer>
+</body>
+</html>
